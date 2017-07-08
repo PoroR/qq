@@ -9,17 +9,34 @@
    <script src="index.js"></script>
 </head>
 <body>
-   <div class="send">
-      <textarea id="messageText" name="sendMessage" placeholder="your massage"></textarea>
-      <input id="sendBill" type="button" name="send" value="send message from Bill" onclick="sendBill()">
-      <input id="sendBoob" type="button" name="send" value="send massage from Boob" onclick="sendBoob()">
+   <div class="sendBlock">
+         <textarea id="messageText" name="sendMessage" value="your massage" autofocus></textarea>
+      <section id="oldMessage">
+         <input id="sendBill" type="button" name="send" value="send message from Bill" onclick="sendBill()">
+         <input id="sendBoob" type="button" name="send" value="send massage from Boob" onclick="sendBoob()">
+      </section>
+      <section id="newMessage">
+         <textarea id="yourText" name="sendMessage" placeholder="yourText"></textarea>
+         <textarea id="yourName" name="sendMessage" placeholder="yourName"></textarea>
+         <input id="sendCustom" type="button" name="send" value="send massage from Custom" onclick="sendCustom()">
+      <section>
    </div>
-   <div>
-      <textarea id="getBillMessage" name="getMessage" readonly></textarea>
-      <textarea id="getBoobMessage" name="getMessage" readonly></textarea>
-      <input id="showBill" type="button" name="send" value="show message from Bill" onclick="showBill()">
-      <input id="showBoob" type="button" name="send" value="show massage from Boob" onclick="showBoob()">
+
+   <div class="getBlock">
+      <section id="showBillBlock">
+         <textarea id="getBillMessage" name="getMessage" readonly></textarea>
+         <input id="showBill" type="button" name="send" value="show message from Bill" onclick="showBill(); showBill1()">
+      </section>
+      <section id="showBoobBlock">
+         <textarea id="getBoobMessage" name="getMessage" readonly></textarea>
+         <input id="showBoob" type="button" name="send" value="show massage from Boob" onclick="showBoob(); showBoob1()">
+      </section>
+      <section id="showCustomBlock">
+         <textarea id="getCustomMessage" name="getMessage" readonly></textarea>
+         <input id="showCustom" type="button" name="send" value="show massage from Custom User" onclick="showCustom(); showCustom1()">
+      </section>
+
+      <textarea id="getAllMessage" name="getMessage" readonly></textarea>
    </div>
-   <div></div>
 </body>
 </html>
